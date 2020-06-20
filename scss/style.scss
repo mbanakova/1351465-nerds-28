@@ -10,6 +10,10 @@ $wet-grey: #444444;
 $red: #fb565a;
 $navy: #283136;
 
+$text: 16px;
+$line: 24px;
+$weight: 400;
+
 
 // Миксины:
 
@@ -20,17 +24,46 @@ $navy: #283136;
 }
 
 @mixin a() {
+    display: block;
     text-decoration: none;
     color: inherit;
     text-transform: uppercase;
 }
 
+@mixin field-reset() {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin font() {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: $text;
+    line-height: $line;
+    font-weight: $weight;
+}
+
 // Страница
 
 body {
+    @include field-reset();
+    @include font();
+    min-width: 1440px;
     color: $navy;
+}
 
-    h1 {
-        font-weight: 700;
-    }
+.container {
+    width: 1160px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
 }
