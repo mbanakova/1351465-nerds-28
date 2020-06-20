@@ -4,7 +4,7 @@ var sass = require('gulp-sass');
 
 function css_style(done) {
 
-    gulp.src('./scss/style.scss')
+    gulp.src('./scss/normalize.scss')
     .pipe(sass({
         errorLogToConsole: true,
         outputStyle: 'compressed'

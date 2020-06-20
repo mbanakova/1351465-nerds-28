@@ -1,7 +1,34 @@
-$color: #070a3a;
+// Переменные:
+
+$black: #000000;
+$white: #ffffff;
+$bg-grey: #eeeeee;
+$dark-grey: #666666;
+$light-grey: #e1e1e1;
+$medium-grey: #4d4d4d;
+$wet-grey: #444444;
+$red: #fb565a;
+$navy: #283136;
+
+
+// Миксины:
+
+@mixin ul() {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin a() {
+    text-decoration: none;
+    color: inherit;
+    text-transform: uppercase;
+}
+
+// Страница
 
 body {
-    color: $color;
+    color: $navy;
 
     h1 {
         font-weight: 700;
