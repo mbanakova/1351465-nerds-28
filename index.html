@@ -2,11 +2,268 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.min.css">
     <title>HTML Academy: Нёрдс</title>
   </head>
   <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+    <!-- Хедер -->
+    <header class="header">
+      <div class="container">
+
+        <div class="logo">
+          <a class="logo__link" href="#">
+            <img class="logo__img" width="160" height="65" src="img/logo.svg" alt="Логотип">
+          </a>
+        </div>
+
+        <nav class="navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Студия</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Клиенты</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Магазин</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="cart">
+          <a class="cart__link" href="#">Корзина</a>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- Основное -->
+    <main class="main">
+      <h1 class="main__title">Дизайн-студия Нёрдс</h1>
+
+      <!-- Слайдер -->
+      <section class="slider">
+        <h2 class="slider__title">Наш стиль работы</h2>
+        <div class="container">
+
+          <ul class="slider__content slider-list">
+
+            <li class="slider-list__item">
+              <h3 class="slider-list__title">Долго, дорого, скрупулезно.</h3>
+              <p class="slider-list__text">
+                Математически выверенный дизайн 
+                для вашего сайта или мобильного приложения
+              </p>
+              <img class="slider-list__img" width="760" height="431" src="img/slide1.png" alt="Слайдер 1">
+            </li>
+
+            <li class="slider-list__item">
+              <h3 class="slider-list__title">Любим математику как никто другой</h3>
+              <p class="slider-list__text">
+                Никакого креатива, только математические формулы 
+                для расчета идеальных пропорций
+              </p>
+              <img class="slider-list__img" width="760" height="431" src="img/slide2.png" alt="Слайдер 2">
+            </li>
+
+            <li class="slider-list__item">
+              <h3 class="slider-list__title">Только ночь, только хардкор</h3>
+              <p class="slider-list__text">
+                Работать днем, как все? Мы против этого.
+                Ближе к полуночи работа только начинается
+              </p>
+              <img class="slider-list__img" width="760" height="431" src="img/slide3.png" alt="Слайдер 3">
+            </li>
+            
+          </ul>
+
+          <div class="slider__controls">
+            <input class="slider__input" type="radio" id="slider-1" name="toggle">
+            <label class="slider__label" for="slider-1"></label>
+
+            <input class="slider__input" type="radio" id="slider-2" name="toggle">
+            <label class="slider__label" for="slider-2"></label>
+
+            <input class="slider__input" type="radio" id="slider-3" name="toggle">
+            <label class="slider__label" for="slider-3"></label>
+          </div>
+
+          <a class="slider__button" href="#">Узнать больше</a>
+
+        </div>
+      </section>
+
+      <!-- Преимущества -->
+      <section class="features">
+        <h2 class="features__title">Что мы умеем:</h2>
+        <div class="container">
+
+          <ul class="features__list">
+
+            <li class="features__item">
+              <img class="features__img" width="300" height="146" src="img/feature1.svg" alt="">
+              <h3 class="features__header">Веб-сайты</h3>
+              <p class="features__text">
+                Мир никогда не будет прежним 
+                после того как увидит ваш сайт!
+              </p>
+              <a class="features__link" href="#">Заказать</a>
+            </li>
+
+            <li class="features__item">
+              <img class="features__img" width="300" height="146" src="img/feature2.svg" alt="">
+              <h3 class="features__header">Приложения</h3>
+              <p class="features__text">
+                Покорите топ-10 приложений в 
+                AppStore и Google Play
+              </p>
+              <a class="features__link" href="#">Заказать</a>
+            </li>
+
+            <li class="features__item">
+              <img class="features__img" width="300" height="146" src="img/feature3.svg" alt="">
+              <h3 class="features__header">Презентации</h3>
+              <p class="features__text">
+                Вы даже не подозреваете, 
+                насколько вы изумительны!
+              </p>
+              <a class="features__link" href="#">Заказать</a>
+            </li>
+
+          </ul>
+        </div>
+      </section>
+
+      <!-- О нас -->
+      <section class="about">
+        <div class="container">
+          <div class="wrapper">
+            <h2 class="about__title">
+              Мы — маленькая, но гордая 
+              дизайн-студия из Краснодара.
+            </h2>
+            <p class="about__text">
+              Исповедуем принципы минимализма и чистоты. Ставим математический расчет 
+              превыше креатива. Работаем не покладая рук, как роботы.
+            </p>
+
+            <h3 class="about__list-title">
+              Выполняем заказы на разработку:
+            </h3>
+            <ul class="about__list">
+              <li class="about__item">Веб-сайтов любой сложности</li>
+              <li class="about__item">Мобильных приложений для iOS и Android</li>
+              <li class="about__item">Слайдшоу и видео для корпоративных презентаций</li>
+            </ul>
+          </div>
+
+          <div class="wrapper">
+            <div class="claims">
+              <img class="claims__img" width="360" height="208" src="img/logo-colored.svg" alt="Цветной логотип">
+
+              <h3 class="claims__list-title">С 2004 года любим точность во всём:</h3>
+              <ul class="claims__list">
+
+                <li class="claims__item">
+                  <p class="claims__percent">146<sup>%</sup></p>
+                  <p class="claims__description">Уровень самоотдачи</p>
+                </li>
+
+                <li class="claims__item">
+                  <p class="claims__percent">100<sup>%</sup></p>
+                  <p class="claims__description">Соблюдение сроков</p>
+                </li>
+
+                <li class="claims__item">
+                  <p class="claims__percent">50<sup>%</sup></p>
+                  <p class="claims__description">Минимальная предоплата</p>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Клиенты -->
+      <section class="clients">
+        <h2 class="clients__title">Наши клиенты:</h2>
+
+        <div class="container">
+          <ul class="clients__list">
+
+            <li class="clients__item">
+              <a class="clients__link" href="#">
+                <img class="clients__img" width="200" height="68" src="img/html-academy.svg" alt="HTML академия">
+              </a>
+            </li>
+
+            <li class="clients__item">
+              <a class="clients__link" href="#">
+                <img class="clients__img" width="209" height="90" src="img/borodinsky.svg" alt="Бородинский">
+              </a>
+            </li>
+
+            <li class="clients__item">
+              <a class="clients__link" href="#">
+                <img class="clients__img" width="185" height="52" src="img/pink.svg" alt="Пинк">
+              </a>
+            </li>
+
+            <li class="clients__item">
+              <a class="clients__link" href="#">
+                <img class="clients__img" width="173" height="84" src="img/mishka.svg" alt="Мишка">
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+      <section class="contacts">
+        <h2 class="contacts__title">Как с нами связаться:</h2>
+        <img class="map" src="img/map.png" width="1440" height="416" alt="Наш офис на карте">
+        <div class="pointer">
+          <img class="pointer__img" width="231" height="190" src="img/pointer.svg" alt="Указатель на карте">
+        </div>
+  
+        <div class="container">
+          <div class="contacts__card">
+            <h3 class="contacts__card-title">NЁRDS DESIGN STUDIO</h3>
+            <address class="contacts__card-address">
+              191186, Санкт-Петербург, 
+              ул. Б. Конюшенная, д. 19/8
+            </address>
+            <a class="contacts__card-phone" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+            <a class="contacts__card-link" href="#">Напишите нам</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="footer-bottom__social social">
+            <a class="social__link social__vk" href="#"></a>
+            <a class="social__link social__fb" href="#"></a>
+            <a class="social__link social__in" href="#"></a>
+          </div>
+
+          <p class="footer-bottom__slogan">
+            Давайте дружить, это выгодно!
+          </p>
+          <p class="footer-bottom__text">
+            Скидка 10% для друзей из социальных сетей.
+          </p>
+        </div>
+      </div>
+    </footer>
 
   </body>
 </html>
