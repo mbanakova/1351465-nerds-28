@@ -44,6 +44,11 @@ $transition: color 0.2s ease-in-out;
     font-weight: $weight;
 }
 
+@mixin bg-repeat() {
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
 
 // Страница
 
@@ -165,6 +170,80 @@ body {
 
                 &--active {
                     border-bottom: 2px solid $red;
+                }
+            }
+        }
+    }
+}
+
+
+.footer {
+
+
+
+
+
+    .footer-bottom {
+        .container {
+            padding: 68px 0;
+            display: flex;
+            align-items: center;
+
+            .footer-bottom__social {
+                display: flex;
+                margin-right: 140px;
+
+                .social__link {
+                    display: block;
+                    margin-right: 9px;
+                    width: 81px;
+                    height: 81px;
+                    font-size: 0;
+                    background-color: $light-grey;
+                    @include bg-repeat();
+                    border-radius: 50%;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    &:hover {
+                        background-color: $red;
+                    }
+
+                    &:active {
+                        box-shadow: inset 80px 80px 0px rgba(0, 1, 1, 0.2);
+                    }
+                }
+
+                .social__vk {
+                    background-image: url("../img/vk-icon.svg");
+                }
+
+                .social__fb {
+                    background-image: url("../img/fb-icon.svg");
+                }
+
+                .social__in {
+                    background-image: url("../img/insta-icon.png");
+                }
+            }
+
+            .wrapper {
+
+                .footer-bottom__slogan {
+                    @include field-reset();
+                    margin-bottom: 10px;
+                    color: $black;
+                    font-size: 36px;
+                    line-height: 36px;
+                    font-weight: 700;
+                }
+
+                .footer-bottom__text {
+                    @include field-reset();
+                    color: $wet-grey;
+                    line-height: 22px;
                 }
             }
         }
