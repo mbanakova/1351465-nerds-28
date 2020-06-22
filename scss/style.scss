@@ -187,6 +187,55 @@ body {
         overflow: hidden;
         position: relative;
 
+        .slider__input {
+            display: none;
+        }
+
+        .slider__label {
+            display: inline-block;
+            // position: absolute;
+            // top: 90%;
+            margin: auto;
+            width: 20px;
+            height: 20px;
+            border: 5px solid $white;
+            border-radius: 50%;
+            background-color: $white;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        // .slider__label[for="slider-1"] {
+        //     left: 47%;
+        // }
+
+        // .slider__label[for="slider-2"] {
+        //     left: 50%;
+        // }
+
+        // .slider__label[for="slider-3"] {
+        //     left: 53%;
+        // }
+
+        #slider-1:checked ~ .slider__label[for="slider-1"],
+        #slider-2:checked ~ .slider__label[for="slider-2"],
+        #slider-3:checked ~ .slider__label[for="slider-3"] {
+            background-color: $red;
+        }
+
+        #slider-1:checked ~ .slider__list {
+            transform: translate(0);
+        }
+
+        #slider-2:checked ~ .slider__list {
+            transform: translate(-1160px);
+        }
+
+        #slider-3:checked ~ .slider__list {
+            transform: translate(-2320px);
+        }
+
+
         .slider__list {
             @include ul();
             transition: transform 1s ease;
@@ -199,12 +248,15 @@ body {
 
                 .wrapper {
                     display: flex;
+                    position: relative;
 
                     .text-wrapper {
                         display: flex;
-                        flex-basis: 400px;
-                        flex-wrap: wrap;
+                        flex-direction: column;
+                        flex-basis: 600px;
+                        flex-wrap: nowrap;
                         align-content: start;
+
 
                         .slider__list-title {
                             @include field-reset();
@@ -218,48 +270,17 @@ body {
                         .slider__list-text {
                             @include field-reset();
                             margin-top: 25px;
+                            max-width: 400px;
                         }
                     }
+
+                    .slider__list-img {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        z-index: -1;
+                    }
                 }
-            }
-        }
-
-        .slider__controls {
-            position: absolute;
-            top: 90%;
-            left: 50%;
-
-            .slider__input {
-                display: none;
-            }
-
-            .slider__label {
-                display: inline-block;
-                width: 20px;
-                height: 20px;
-                border: 5px solid $white;
-                border-radius: 50%;
-                background-color: $white;
-                margin: 0 5px;
-                cursor: pointer;
-            }
-
-            #slider-1:checked ~ .slider__label[for="slider-1"],
-            #slider-2:checked ~ .slider__label[for="slider-2"],
-            #slider-3:checked ~ .slider__label[for="slider-3"] {
-                background-color: $red;
-            }
-
-            #slider-1:checked ~ .slider__list {
-                transform: translate(0);
-            }
-
-            #slider-2:checked ~ .slider__list {
-                transform: translate(-1160px);
-            }
-
-            #slider-3:checked ~ .slider__list {
-                transform: translate(-2320px);
             }
         }
 
@@ -529,7 +550,7 @@ body {
         .container {
             position: absolute;
             top: 50%;
-            left: 15%;
+            left: 10%;
             transform: translateY(-50%);
 
             .contacts__card {
