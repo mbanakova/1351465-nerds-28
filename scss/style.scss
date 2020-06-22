@@ -8,6 +8,8 @@ $light-grey: #e1e1e1;
 $medium-grey: #4d4d4d;
 $wet-grey: #444444;
 $red: #fb565a;
+$green: #00ca74;
+$yellow: #efc84a;
 $navy: #283136;
 
 $text: 16px;
@@ -264,7 +266,7 @@ body {
         .slider__button {
             @include a();
             position: absolute;
-            left: 0;
+            left: 20px;
             bottom: 50px;
             padding: 16px 54px;
             max-width: 380px;
@@ -279,19 +281,71 @@ body {
 }
 
 
+// Преимущества
 
+.features {
 
+    .container {
+        margin-top: 80px;
+        border-bottom: 2px solid $bg-grey;
 
+        .features__list {
+            @include ul();
+            padding-bottom: 80px;
+            display: flex;
+            justify-content: space-between;
 
+            .features__item {
+                width: 300px;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
 
+                .features__header {
+                    @include field-reset();
+                    margin-top: 25px;
+                    text-transform: uppercase;
+                    color: $black;
+                    font-size: 24px;
+                    line-height: 30px;
+                    font-weight: 700;
+                }
 
+                .features__text {
+                    @include field-reset();
+                    margin-top: 16px;
+                }
 
+                .features__link {
+                    @include a();
+                    margin-top: 32px;
+                    padding: 14px 40px;
+                    color: $white;
+                    text-align: center;
+                    background-color: $red;
+                    border-radius: 3px;
 
+                    &--green {
+                        background-color: $green;
+                    }
 
+                    &--yellow {
+                        background-color:  $yellow;
+                    }
 
+                    &:hover {
+                        box-shadow: inset 80px 80px 0px rgba(0, 1, 1, 0.1);
+                    }
 
+                    &:active {
+                        box-shadow: inset 80px 80px 0px rgba(0, 1, 1, 0.2);
+                    }
+                }
+            }
+        }
+    }
 
-
+}
 
 
 // Заказчики
