@@ -22,7 +22,7 @@
         <nav class="header__navigation">
           <ul class="header__navigation-list">
             <li class="header__navigation-item">
-              <a class="header__navigation-link header__navigation-link--active" href="#">Студия</a>
+              <a class="header__navigation-link" href="#">Студия</a>
             </li>
             <li class="header__navigation-item">
               <a class="header__navigation-link" href="#">Клиенты</a>
@@ -37,7 +37,7 @@
         </nav>
 
         <div class="header__cart">
-          <a class="header__cart-link header__cart-link--active" href="#">Корзина</a>
+          <a class="header__cart-link" href="#">Корзина</a>
         </div>
 
       </div>
@@ -52,39 +52,51 @@
         <h2 class="slider__title visually-hidden">Наш стиль работы</h2>
         <div class="container">
 
-          <ul class="slider__content slider-list">
+          <ul class="slider__list">
 
-            <li class="slider-list__item">
-              <h3 class="slider-list__title">Долго, дорого, скрупулезно.</h3>
-              <p class="slider-list__text">
-                Математически выверенный дизайн 
-                для вашего сайта или мобильного приложения
-              </p>
-              <img class="slider-list__img" width="760" height="431" src="img/slide1.png" alt="Слайдер 1">
+            <li class="slider__list-item">
+              <div class="wrapper">
+                <div class="text-wrapper">
+                  <h3 class="slider__list-title">Долго, дорого, скрупулезно.</h3>
+                  <p class="slider__list-text">
+                    Математически выверенный дизайн 
+                    для вашего сайта или мобильного приложения
+                  </p>
+                </div>
+                <img class="slider__list-img" width="760" height="431" src="img/slide1.png" alt="Слайдер 1">
+              </div>
             </li>
 
-            <li class="slider-list__item">
-              <h3 class="slider-list__title">Любим математику как никто другой</h3>
-              <p class="slider-list__text">
-                Никакого креатива, только математические формулы 
-                для расчета идеальных пропорций
-              </p>
-              <img class="slider-list__img" width="760" height="431" src="img/slide2.png" alt="Слайдер 2">
+            <li class="slider__list-item">
+              <div class="wrapper">
+                <div class="text-wrapper">
+                  <h3 class="slider__list-title">Любим математику как никто другой</h3>
+                  <p class="slider__list-text">
+                    Никакого креатива, только математические формулы 
+                    для расчета идеальных пропорций
+                  </p>
+                </div>
+                <img class="slider__list-img" width="760" height="431" src="img/slide2.png" alt="Слайдер 2">
+              </div>
             </li>
 
-            <li class="slider-list__item">
-              <h3 class="slider-list__title">Только ночь, только хардкор</h3>
-              <p class="slider-list__text">
-                Работать днем, как все? Мы против этого.
-                Ближе к полуночи работа только начинается
-              </p>
-              <img class="slider-list__img" width="760" height="431" src="img/slide3.png" alt="Слайдер 3">
+            <li class="slider__list-item">
+              <div class="wrapper">
+                <div class="text-wrapper">
+                  <h3 class="slider__list-title">Только ночь, только хардкор</h3>
+                  <p class="slider__list-text">
+                    Работать днем, как все? Мы против этого.
+                    Ближе к полуночи работа только начинается
+                  </p>
+                </div>
+                <img class="slider__list-img" width="760" height="431" src="img/slide3.png" alt="Слайдер 3">
+              </div>
             </li>
             
           </ul>
 
           <div class="slider__controls">
-            <input class="slider__input" type="radio" id="slider-1" name="toggle">
+            <input class="slider__input" type="radio" id="slider-1" name="toggle" checked>
             <label class="slider__label" for="slider-1"></label>
 
             <input class="slider__input" type="radio" id="slider-2" name="toggle">

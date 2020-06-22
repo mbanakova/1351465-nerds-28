@@ -176,6 +176,125 @@ body {
     }
 }
 
+// Cлайдер
+
+.slider {
+    background-color: $bg-grey;
+
+    .container {
+        overflow: hidden;
+        position: relative;
+
+        .slider__list {
+            @include ul();
+            transition: transform 1s ease;
+            width: 3480px;
+            
+            .slider__list-item {
+                float: left;
+                width: 1160px;
+                min-height: 431px;
+
+                .wrapper {
+                    display: flex;
+
+                    .text-wrapper {
+                        display: flex;
+                        flex-basis: 400px;
+                        flex-wrap: wrap;
+                        align-content: start;
+
+                        .slider__list-title {
+                            @include field-reset();
+                            margin-top: 58px;
+                            font-size: 55px;
+                            line-height: 55px;
+                            font-weight: 500;
+                            color: $black;
+                        }
+
+                        .slider__list-text {
+                            @include field-reset();
+                            margin-top: 25px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .slider__controls {
+            position: absolute;
+            top: 90%;
+            left: 50%;
+
+            .slider__input {
+                display: none;
+            }
+
+            .slider__label {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                border: 5px solid $white;
+                border-radius: 50%;
+                background-color: $white;
+                margin: 0 5px;
+                cursor: pointer;
+            }
+
+            #slider-1:checked ~ .slider__label[for="slider-1"],
+            #slider-2:checked ~ .slider__label[for="slider-2"],
+            #slider-3:checked ~ .slider__label[for="slider-3"] {
+                background-color: $red;
+            }
+
+            #slider-1:checked ~ .slider__list {
+                transform: translate(0);
+            }
+
+            #slider-2:checked ~ .slider__list {
+                transform: translate(-1160px);
+            }
+
+            #slider-3:checked ~ .slider__list {
+                transform: translate(-2320px);
+            }
+        }
+
+        .slider__button {
+            @include a();
+            position: absolute;
+            left: 0;
+            bottom: 50px;
+            padding: 16px 54px;
+            max-width: 380px;
+            background-color: $red;
+            border-radius: 3px;
+            color: $white;
+            line-height: 18px;
+            font-weight: 500;
+            text-align: center;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Заказчики
 
 .clients {
 
