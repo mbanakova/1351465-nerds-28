@@ -276,6 +276,14 @@ body {
             line-height: 18px;
             font-weight: 500;
             text-align: center;
+
+            &:hover {
+                box-shadow: inset 80px 80px 0px rgba(0, 1, 1, 0.1);
+            }
+
+            &:active {
+                box-shadow: inset 80px 80px 0px rgba(0, 1, 1, 0.2);
+            }
         }
     }
 }
@@ -344,9 +352,109 @@ body {
             }
         }
     }
-
 }
 
+
+// О нас
+
+.about {
+    .container {
+        margin-top: 39px;
+        padding-bottom: 74px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid $bg-grey;
+
+        .about__title {
+            @include field-reset();
+            margin-top: 24px;
+            color: $black;
+            font-size: 45px;
+            line-height: 45px;
+            font-weight: 500;
+        }
+
+        .about__text {
+            @include field-reset();
+            margin-top: 32px;
+        }
+
+        .about__list-title {
+            @include field-reset();
+            margin-top: 40px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .about__list {
+            @include ul();
+            margin-top: 23px;
+
+            .about__item {
+                position: relative;
+                padding-left: 35px;
+                margin-bottom: 26px;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    top: 10px;
+                    left: 0;
+                    width: 25px;
+                    height: 2px;
+                    background-color: $red;
+                }
+            }
+        }
+
+        .claims {
+            width: 360px;
+
+            .claims__img {
+                margin-bottom: 37px;
+            }
+
+            .claims__list-title {
+                @include field-reset();
+                margin-bottom: 31px;
+                color: $black;
+                text-transform: uppercase;
+                font-size: 16px;
+                font-weight: 700;
+                text-align: center;
+            }
+
+            .claims__list {
+                @include ul();
+                display: flex;
+                justify-content: space-between;
+
+                .claims__item {
+                    max-width: 120px;
+
+                    .claims__percent {
+                        @include field-reset();
+                        margin-bottom: 10px;
+                        color: $black;
+                        font-size: 45px;
+                        line-height: 64px;
+                        font-weight: 700;
+
+                        .sup {
+                            font-size: 26px;
+                            line-height: 40px;
+                            font-weight: 700;
+                        }
+                    }
+
+                    .claims__description {
+                        @include field-reset();
+                    }
+                }
+            }
+        }
+    }
+}
 
 // Заказчики
 
