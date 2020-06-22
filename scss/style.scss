@@ -193,29 +193,30 @@ body {
 
         .slider__label {
             display: inline-block;
-            // position: absolute;
-            // top: 90%;
+            position: absolute;
+            top: 90%;
+            z-index: 20;
             margin: auto;
             width: 20px;
             height: 20px;
-            border: 5px solid $white;
+            border: 5px solid $navy;
             border-radius: 50%;
             background-color: $white;
             margin: 0 5px;
             cursor: pointer;
         }
 
-        // .slider__label[for="slider-1"] {
-        //     left: 47%;
-        // }
+        .slider__label[for="slider-1"] {
+            left: 47%;
+        }
 
-        // .slider__label[for="slider-2"] {
-        //     left: 50%;
-        // }
+        .slider__label[for="slider-2"] {
+            left: 50%;
+        }
 
-        // .slider__label[for="slider-3"] {
-        //     left: 53%;
-        // }
+        .slider__label[for="slider-3"] {
+            left: 53%;
+        }
 
         #slider-1:checked ~ .slider__label[for="slider-1"],
         #slider-2:checked ~ .slider__label[for="slider-2"],
