@@ -101,7 +101,6 @@ body {
             &-link:active {
                 opacity: 0.3;
             }
-
         }
 
         .header__navigation {
@@ -157,7 +156,6 @@ body {
                     width: 15px;
                     height: 15px;
                     background-image: url("../img/cart-icon.svg");
-
                 }
 
                 &:hover {
@@ -236,12 +234,11 @@ body {
             transform: translate(-2320px);
         }
 
-
         .slider__list {
             @include ul();
             transition: transform 1s ease;
             width: 3480px;
-            
+
             .slider__list-item {
                 float: left;
                 width: 1160px;
@@ -316,7 +313,6 @@ body {
 // Преимущества
 
 .features {
-
     .container {
         margin-top: 80px;
         border-bottom: 2px solid $bg-grey;
@@ -493,7 +489,6 @@ body {
 // Заказчики
 
 .clients {
-
     .container {
         margin-bottom: 80px;
         padding: 44px 0;
@@ -608,9 +603,6 @@ body {
             }
         }
     }
-
-
-
 
     .footer-bottom {
         .container {
