@@ -42,4 +42,14 @@ body {
 
 .button {
     @include button();
+
+    &:hover {
+      background-color: darken($red, 10%);
+      transition: 0.3 ease-in-out;
+    }
+
+    &:active {
+        background-color: darken($red, 20%);
+        transition: 0.3 ease-in-out;
+    }
 }

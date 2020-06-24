@@ -31,11 +31,11 @@
 }
 
 @mixin button {
-font-size: $text;
-line-height: $line * 0.75;
-font-weight: $weight * 1.25;
-text-align: center;
-border-radius: 3px;
-background-color: $red;
-color: $white;
+  font-size: $text;
+  line-height: $line * 0.75;
+  font-weight: $weight * 1.25;
+  text-align: center;
+  border-radius: 3px;
+  background-color: $red;
+  color: $white;
 }
