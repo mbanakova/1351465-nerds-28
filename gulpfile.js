@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 
-function css_style(done) {
+function css(done) {
 
     gulp.src('./scss/style.scss')
     .pipe(sass({
@@ -16,6 +16,6 @@ function css_style(done) {
     done();
 }
 
-gulp.task(css_style);
+gulp.task(css);
 
 // exports.default = defaultSomeTask;
