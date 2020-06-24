@@ -34,6 +34,7 @@
 
               .features__link {
                   @include a();
+                  color: $white;
                   margin-top: 32px;
                   padding: 14px 40px;
 

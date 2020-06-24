@@ -1,73 +1,13 @@
 // @import "normalize.scss";
-@import "header.scss";
-@import "slider.scss";
-@import "features.scss";
-@import "about.scss";
-@import "clients.scss";
-@import "footer.scss";
+@import "variables.scss";
+@import "mixins.scss";
 
-// Переменные:
-
-$black: #000000;
-$white: #ffffff;
-$bg-grey: #eeeeee;
-$dark-grey: #666666;
-$light-grey: #e1e1e1;
-$medium-grey: #4d4d4d;
-$wet-grey: #444444;
-$red: #fb565a;
-$green: #00ca74;
-$yellow: #efc84a;
-$navy: #283136;
-
-$text: 16px;
-$line: 24px;
-$weight: 400;
-
-$transition: color 0.2s ease-in-out;
-
-
-// Миксины:
-
-@mixin ul() {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-@mixin a() {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    text-transform: uppercase;
-}
-
-@mixin field-reset() {
-    margin: 0;
-    padding: 0;
-}
-
-@mixin font() {
-    font-family: "Roboto", "Arial", sans-serif;
-    font-size: $text;
-    line-height: $line;
-    font-weight: $weight;
-}
-
-@mixin bg-repeat() {
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-@mixin button {
-  font-size: $text;
-  line-height: $line * 0.75;
-  font-weight: $weight * 1.25;
-  text-align: center;
-  border-radius: 3px;
-  background-color: $red;
-  color: $white;
-}
+@import "blocks/header.scss";
+@import "blocks/slider.scss";
+@import "blocks/features.scss";
+@import "blocks/about.scss";
+@import "blocks/clients.scss";
+@import "blocks/footer.scss";
 
 
 // Страница
@@ -103,4 +43,3 @@ body {
 .button {
     @include button();
 }
-

@@ -106,12 +106,12 @@
 
       .slider__button {
           @include a();
+          color: $white;
           position: absolute;
           left: 20px;
           bottom: 50px;
           padding: 16px 54px;
           max-width: 380px;
-
 
           &:hover {
               box-shadow: inset 80px 80px 0px rgba(0, 1, 1, 0.1);

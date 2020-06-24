@@ -1,0 +1,41 @@
+// Миксины:
+
+@mixin ul() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin a() {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  text-transform: uppercase;
+}
+
+@mixin field-reset() {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin font() {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: $text;
+  line-height: $line;
+  font-weight: $weight;
+}
+
+@mixin bg-repeat() {
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@mixin button {
+font-size: $text;
+line-height: $line * 0.75;
+font-weight: $weight * 1.25;
+text-align: center;
+border-radius: 3px;
+background-color: $red;
+color: $white;
+}
