@@ -7,10 +7,10 @@ function css_style(done) {
     gulp.src('./scss/style.scss')
     .pipe(sass({
         errorLogToConsole: true,
-        // outputStyle: 'compressed'
+        outputStyle: 'compressed'
     }))
     .on('error', console.error.bind(console))
-    // .pipe(rename({suffix: '.min'}))
+    .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('./css/'));
 
     done();
