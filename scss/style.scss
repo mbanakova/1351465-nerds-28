@@ -1,3 +1,6 @@
+// @import "normalize.scss";
+@import "header.scss";
+
 // Переменные:
 
 $black: #000000;
@@ -82,99 +85,6 @@ body {
     overflow: hidden;
 }
 
-.header {
-    background-color: $bg-grey;
-
-    .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-top: 49px;
-
-        .header__logo {
-            height: 65px;
-
-            &-link {
-                display: block;
-            }
-
-            &-link:active {
-                opacity: 0.3;
-            }
-        }
-
-        .header__navigation {
-
-            margin-right: 30px;
-
-            &-list {
-                @include ul();
-                display: flex;
-                justify-content: space-between;
-            }
-
-            &-item {
-                padding: 0 20px;
-            }
-
-            &-link {
-                @include a();
-                padding: 15px 0;
-                line-height: 30px;
-                font-weight: 500;
-
-                &:hover {
-                    color: $red;
-                    transition: $transition;
-                }
-
-                &:active {
-                    color: $black;
-                    opacity: 0.3;
-                }
-
-                &--active {
-                    border-bottom: 2px solid $red;
-                }
-            }
-        }
-
-        .header__cart {
-
-            &-link {
-                @include a();
-                position: relative;
-                padding: 15px 0  15px 40px;
-                line-height: 30px;
-                font-weight: 500;
-
-                &::before {
-                    position: absolute;
-                    content: "";
-                    top: 22px;
-                    left: 0;
-                    width: 15px;
-                    height: 15px;
-                    background-image: url("../img/cart-icon.svg");
-                }
-
-                &:hover {
-                    color: $red;
-                    transition: $transition;
-                }
-
-                &:active {
-                    color: $black;
-                    opacity: 0.3;
-                }
-
-                &--active {
-                    border-bottom: 2px solid $red;
-                }
-            }
-        }
-    }
-}
 
 // Cлайдер
 

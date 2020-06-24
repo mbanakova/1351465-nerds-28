@@ -1,0 +1,97 @@
+// Хедер
+
+.header {
+  background-color: $bg-grey;
+
+  .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 49px;
+
+      .logo {
+          height: 65px;
+
+          &__link {
+              display: block;
+          }
+
+          &__link:active {
+              opacity: 0.3;
+          }
+      }
+
+      .header__navigation {
+          margin-right: 30px;
+      }
+
+      .navigation {
+
+        &__list {
+          @include ul();
+          display: flex;
+          justify-content: space-between;
+        }
+
+        &__item {
+            padding: 0 20px;
+        }
+
+        &__link {
+            @include a();
+            padding: 15px 0;
+            line-height: 30px;
+            font-weight: 500;
+
+            &:hover {
+                color: $red;
+                transition: $transition;
+            }
+
+            &:active {
+                color: $black;
+                opacity: 0.3;
+            }
+
+            &--active {
+                border-bottom: 2px solid $red;
+            }
+        }
+      }
+
+      .cart {
+
+          &__link {
+              @include a();
+              position: relative;
+              padding: 15px 0  15px 40px;
+              line-height: 30px;
+              font-weight: 500;
+
+              &::before {
+                  position: absolute;
+                  content: "";
+                  top: 22px;
+                  left: 0;
+                  width: 15px;
+                  height: 15px;
+                  background-image: url("../img/cart-icon.svg");
+              }
+
+              &:hover {
+                  color: $red;
+                  transition: $transition;
+              }
+
+              &:active {
+                  color: $black;
+                  opacity: 0.3;
+              }
+
+              &--active {
+                  border-bottom: 2px solid $red;
+              }
+            }
+      }
+  }
+}
