@@ -4,14 +4,13 @@
   .container {
       margin-top: 39px;
       padding-bottom: 74px;
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: 700px 360px;
+      grid-gap: 60px;
       border-bottom: 2px solid $bg-grey;
 
-      .wrapper {
-          display: flex;
-          flex-direction: column;
-          justify-content: stretch;
+      .about__skills {
+        grid-row: 2 /3;
       }
 
       .about__title {
@@ -26,11 +25,11 @@
       .about__text {
           @include field-reset();
           margin-top: 32px;
+          max-width: 650px;
       }
 
       .about__list-title {
           @include field-reset();
-          margin-top: 55px;
           text-transform: uppercase;
           color: $black;
           font-size: 16px;
@@ -59,6 +58,7 @@
       }
 
       .claims {
+        grid-row: 2 / 3;
           width: 360px;
 
           .claims__img {
